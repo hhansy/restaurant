@@ -1,0 +1,48 @@
+header{
+    background-color: #6e6e6e;
+    height: 65px;
+       
+}
+
+
+.Name{
+    font-family: 'ABeeZee';
+    font-size: 40px;
+    padding-top: 12px
+}  
+
+.nav-item{
+    color: black;
+    background-color: #6e6e6e;
+}
+
+.nav-link{
+    color: #FFFFFF
+}
+
+{
+    background-color: black;
+    color: black;
+}
+
+.menu{
+position: absolute;
+width: 62px;
+height: 38px;
+left: 241px;
+top: 19px;
+
+font-family: 'ABeeZee';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 47px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+
+body{
+    margin: 0px;
+}
