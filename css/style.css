@@ -1,9 +1,12 @@
-header{
-    background-color: #6e6e6e;
-    height: 65px;
-       
+.container-fluid{
+    background-color: #787878;
 }
 
+.navbar-brand{
+    font-family: Georgia, serif;
+    font-size: 35px;
+    color: #FFFFFF;
+}
 
 .Name{
     font-family: 'ABeeZee';
@@ -45,4 +48,19 @@ color: #FFFFFF;
 
 body{
     margin: 0px;
+}
+
+.text{
+    position: relative;
+    left: 5px;
+}
+
+.text2{
+    text-align: center;
+}
+
+.my-card{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
 }
