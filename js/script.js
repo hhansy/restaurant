@@ -1,4 +1,4 @@
-let card_list = document.querySelector(".my-card")
+let card_list = document.querySelector(".menu-cards")
 
 async function getData() {
     const response = await fetch("https://api.zerosheets.com/v1/qbj", {
@@ -24,11 +24,11 @@ async function getProducts() {
 
 function getCardHtml(item){
     return`<div class="card" style="width: 18rem;">
-            <img src="img/${my-card.image}">
+            <img src="img/${item.image}">
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <p class="card-text">${item.price}грн</p>
+              <a href="#" class="btn btn-outline-secondary">Детальніше</a>
             </div>
           </div>`
 
@@ -36,7 +36,8 @@ function getCardHtml(item){
 
 
    getProducts().then(function(products){
-    products.forEach(function(products){
+    card_list.innerHTML = ''
+    products.forEach(function(product){
         card_list.innerHTML += getCardHtml(product)
    })
 })

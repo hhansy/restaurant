@@ -1,4 +1,4 @@
-.container-fluid{
+header{
     background-color: #787878;
 }
 
@@ -28,24 +28,6 @@
     color: black;
 }
 
-.menu{
-position: absolute;
-width: 62px;
-height: 38px;
-left: 241px;
-top: 19px;
-
-font-family: 'ABeeZee';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 47px;
-display: flex;
-align-items: center;
-
-color: #FFFFFF;
-}
-
 body{
     margin: 0px;
 }
@@ -59,8 +41,13 @@ body{
     text-align: center;
 }
 
-.my-card{
+.menu-cards{
     flex-wrap: wrap;
     display: flex;
     gap: 20px;
+}
+
+h1, h2, h3{
+    font-family: 'Aref Ruqaa';
+    text-align: center;
 }

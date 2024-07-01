@@ -1,6 +1,8 @@
 [
     {
         "title": "Pizza",
-        "price": "250 грн"
+        "price": "250 ",
+        "image": "image.png"
     }
 ]
+
