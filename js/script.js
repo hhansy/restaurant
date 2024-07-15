@@ -108,8 +108,6 @@ function getToCart(event) {
 
 
 
-
-
 getProducts().then(function (products) {
     card_list.innerHTML = ''
     products.forEach(function (product) {
