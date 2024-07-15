@@ -44,7 +44,7 @@ body{
 .menu-cards{
     flex-wrap: wrap;
     display: flex;
-    gap: 20px;
+    gap: 47px;
 }
 
 h1, h2, h3{
