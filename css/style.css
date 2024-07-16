@@ -23,11 +23,6 @@ header{
     color: #FFFFFF
 }
 
-{
-    background-color: black;
-    color: black;
-}
-
 body{
     margin: 0px
 }
@@ -52,3 +47,7 @@ h1, h2, h3{
     text-align: center;
 }
 
+.order{
+    display: none;
+    
+}

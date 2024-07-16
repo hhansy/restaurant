@@ -1,4 +1,5 @@
 let card_list = document.querySelector(".menu-cards")
+let cart_block = document.querySelector (".cart")
 
 function getCookieValue(cookieName) {
     // Розділяємо всі куки на окремі частини
@@ -53,7 +54,7 @@ function getCardHtml(item) {
               <a href="#" class="btn btn-outline-secondary">Детальніше</a>
             </div>
             <button type="button" class=" btn btn-secondary add-to-cart"
-            data-product='${JSON.stringify(item)}'>
+            data-product='${JSON.stringify(item)}' data-bs-toggle="modal" data-bs-target="#exampleModal"> 
             Додати в кошик</button>
           </div>`
 
@@ -68,7 +69,7 @@ class ShoppingCart {
         this.items = {}
         this.loadCartFromCookies()
     }
-    addItem(ptoduct) {
+    addItem(product) {
         if (this.items[product.title]) {
             this.items[product.title].quantity += 1
         } else {
@@ -96,12 +97,37 @@ class ShoppingCart {
 
 let cart = new ShoppingCart()
 
+function itemHTML(item){
+    return `<div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-4">
+                <img src="img/${item.image}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">${item.title}</h5>
+                  <p class="card-text"><small class="text-body-secondary">Кількість: ${item.quantity} шт</small></p>
+                  <p class="card-text">${item.price * item.quantity} грн</p>
+
+                </div>
+              </div>
+            </div>
+          </div>`
+}
+
 
 function getToCart(event) {
-    let productData = event.target.getAtttibute('data-product')
+    let productData = event.target.getAttribute('data-product')
     let product = JSON.parse(productData)
     cart.addItem(product)
     console.log(cart)
+    cart_block.innerHTML = ''
+        for (let item in cart.items){
+        cart_block.innerHTML += itemHTML(cart.items[item])
+
+    }
+    let order_block = document.querySelector(".order")
+    order_block.style.display = 'block'
 }
 
 
@@ -112,19 +138,21 @@ getProducts().then(function (products) {
     products.forEach(function (product) {
         card_list.innerHTML += getCardHtml(product)
     })
+
+    // Отримуємо всі кнопки "Купити" на сторінці
+let buyButtons = document.querySelectorAll('.add-to-cart');
+// Навішуємо обробник подій на кожну кнопку "Купити"
+if (buyButtons) {
+    buyButtons.forEach(function (button) {
+        button.addEventListener('click', getToCart)
+    });
+}
 })
 
 
 
 
-// Отримуємо всі кнопки "Купити" на сторінці
-let buyButtons = document.querySelectorAll('.add-to-cart');
-// Навішуємо обробник подій на кожну кнопку "Купити"
-if (buyButtons) {
-    buyButtons.forEach(function (button) {
-        button.addEventListener('click', addToCart)
-    });
-}
+
 
 let cart_list = document.querySelector('.cart-items-list')
 if (cart_list){
