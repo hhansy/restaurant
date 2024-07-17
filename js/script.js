@@ -51,7 +51,6 @@ function getCardHtml(item) {
             <div class="card-body">
               <h5 class="card-title">${item.title}</h5>
               <p class="card-text">${item.price}грн</p>
-              <a href="#" class="btn btn-outline-secondary">Детальніше</a>
             </div>
             <button type="button" class=" btn btn-secondary add-to-cart"
             data-product='${JSON.stringify(item)}' data-bs-toggle="modal" data-bs-target="#exampleModal"> 

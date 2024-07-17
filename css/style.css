@@ -49,5 +49,24 @@ h1, h2, h3{
 
 .order{
     display: none;
+
+}
+
+.contact{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nmbr{
     
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
 }
