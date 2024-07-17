@@ -1,72 +1,80 @@
-header{
+header {
     background-color: #787878;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-family: Georgia, serif;
     font-size: 35px;
     color: #FFFFFF;
 }
 
-.Name{
+.Name {
     font-family: 'ABeeZee';
     font-size: 40px;
     padding-top: 12px
-}  
+}
 
-.nav-item{
+.nav-item {
     color: black;
     background-color: #6e6e6e;
 }
 
-.nav-link{
+.nav-link {
     color: #FFFFFF
 }
 
-body{
+body {
     margin: 0px
 }
 
-.text{
+.text {
     position: relative;
     left: 5px;
 }
 
-.text2{
+.text2 {
     text-align: center;
 }
 
-.menu-cards{
+.menu-cards {
     flex-wrap: wrap;
     display: flex;
     gap: 47px;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     font-family: 'Aref Ruqaa';
     text-align: center;
 }
 
-.order{
+.order {
     display: none;
 
 }
 
-.contact{
+.contact {
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.nmbr{
-    
-}
+.nmbr {}
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 30px;
+    padding: 10px;
+}
+
+.inst {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
 }
