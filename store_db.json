@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Pizza",
+        "price": "200",
+        "image": "pizza2.jpg"
+    },
+    {
+        "title": "Sushi",
+        "price": "300",
+        "image": "суші.jpg"
+    },
+    {
+        "title": "French fries",
+        "price": "70",
+        "image": "аа2.jpg"
+    },
+    {
+        "title": "Pasta",
+        "price": "80",
+        "image": "pasta_2.jpg"
+    },
+    {
+        "title": "Salad",
+        "price": "50",
+        "image": "salad.jpg"
+    },
+    {
+        "title": "Burger",
+        "price": "45",
+        "image": "burher.jpg"
+    },
+    {
+        "title": "Ice Cream",
+        "price": "50",
+        "image": "ice-cream.jpg"
+    },
+    {
+        "title": "Nuggets",
+        "price": "80",
+        "image": "nuggets.jpg"
+        }
+]
